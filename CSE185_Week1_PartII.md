@@ -5,7 +5,7 @@ Skills covered: fastqc, data filtering, sequencing alignment, variant calling, v
 Today we will start by taking a look at the quality of our sequencing data, and carry out some
 preprocessing steps. 
 
-## 3. Inspect raw sequencing data with fastqc
+## 4. Inspect raw sequencing data with fastqc
 
 Cd into your home directory (type `cd`). Make a directory that will contain all of the data for week1, use
 `ls` to confirm its there, and `cd` into it. 
@@ -45,7 +45,7 @@ the relevant directory. Copy both files.
 scp [username]@ieng6.ucsd.edu:[root path]/file.html [path to desktop]
 ```
 
-You will be prompted for your cse185 password. Once the files appear on your desktop, open them
+You will be prompted for your cs185 password. Once the files appear on your desktop, open them
 and take a look. Do the basic statistics match what you calculated for the number of reads last
 time? On the left, you’ll see a navigation window with green (normal), yellow (slightly abnormal), and
 red (very unusual) circles for several kinds of data analysis. If you have any red circles, record them
@@ -54,10 +54,10 @@ they mean.
 
 http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/
 
-**For you lab report**, email these files to yourself so you’ll have them when you write your lab report.
+**For you lab report**, upload these files to your `labreport` folder on github so you’ll have them when you write your lab report.
 What do you think we should do about anything fastqc identified as unusual? Answer the <font color="blue">i>Clicker</font> question about it, then feel free to move on. 
 
-## 4. Filtering the reads
+## 5. Filtering the reads
 
 Removing low quality data can improve our downstream analyses. Look at the results of your `fastqc` analysis under the category "Per base sequence quality." Notice that the quality scores tend to decrease toward the end of the reads. Trimming these low quality bases is one way to remove sequencing errors.
 
@@ -85,7 +85,7 @@ sickle pe \
     -s singletons.fastq
 ```
 
-Note this command should all be on one line. To make it more readable it is broken up into multiple lines. A "\" means the command is continued on the next line. Remember, 1 and 2 here are our forward and reverse reads, located in the public file. The general format is the command (`sickle pe`) followed by flags that tell sickle what the file that comes after the flag is. 
+Note this command should all be on one line. To make it more readable it is broken up into multiple lines. A `\` means the command is continued on the next line. Remember, 1 and 2 here are our forward and reverse reads, located in the public file. The general format is the command (`sickle pe`) followed by flags that tell sickle what the file that comes after the flag is. 
 
 With paired-end data alignment algorithms often use the fact that matching forward and reverse reads
 from the same DNA molecule can’t be that far apart (because there is an ideal molecule size for
@@ -108,7 +108,7 @@ section 3, but this time on the `trimpair#.fastq` files. (Note, since these are 
 directory, you won’t have to type out the full path when you run fastqc.)
 
 Like before, transfer the html files for each set (1 or 2) to the desktop for viewing (this will still need
-the full path), and **for your lab report, email them to yourself.**
+the full path), and **for your lab report, upload them to your `labreport` directory on Github.**
 
 What happens if we increase the default quality score to 30? Try it with the command below (be sure
 to name them something distinct like trimpair30_1.fastq). 
@@ -127,7 +127,7 @@ sickle pe \
 How many paired reads did sickle keep this time? You don’t have to redo the fastq analysis just
 answer the <font color="blue">i>Clicker question</font>. 
 
-## 5. Aligning sequences to reference
+## 6. Aligning sequences to reference
 
 To make sense out of these small sequences of DNA, we will map them to our reference sequence
 (the already-solved genome of normal, non-resistant *E. coli*). Mapping works by taking each read and
@@ -184,17 +184,17 @@ your ACTUAL file names. **Record the command you used in your lab notebook.**
 bwa mem NC_000913.3.fasta trimpair1.fastq trimpair2.fastq > trimpaired.sam
 ```
 
-<div class="alert alert-block alert-info">
-**UNIX TIP**: The ‘>’ symbol is called a redirect. If we didn’t have it here, bwa mem would just output
+<blockquote>
+ **UNIX TIP**: The ‘>’ symbol is called a redirect. If we didn’t have it here, bwa mem would just output
 the results to the standard out (aka the screen) which would take up way too much space AND we
 wouldn’t have a record. Redirection takes the output of the preceding command and places it into a
 new file specified after the ‘>’. 
-</div>
+</blockquote>
 
 **Alignment may take a few minutes, in the mean time, read about "sam"**: BWA outputs data in the "SAM" format. We will dive right in with a manual inspection of the data, but to learn more about sam,
 check out: https://samtools.github.io/hts-specs/SAMv1.pdf
 
-## 6. Meet SAM, inspect the alignment
+## 7. Meet SAM, inspect the alignment
 
 Look at first five lines of your new sam file with head:
 
@@ -256,7 +256,7 @@ reference they map to. When the reads from your ampicillin resistant bacterial s
 base as the reference there is a dot or a comma, and when they differ, you will see the base.
 Press escape to exit and enter the command again. How do you interpret the A at position 46? Answer the <font color="blue">i>Clicker question.</font> 
 
-## 7. Make a pileup, call variants
+## 8. Make a pileup, call variants
 
 The goal now is to go through our data, and for each position in the reference genome, see how
 many reads have a mutation at the same position. The tview image looks great, but would take too
@@ -339,7 +339,7 @@ values for us are the position, the reference, and the alternative base. These a
 antibiotic resistant *E. coli* strain! **Record them in your notebook**, along with their "variant allele
 frequency" (use the header to try to find where that is, and ask for help if you can’t find it). 
 
-## 8. Variant effect prediction
+## 9. Variant effect prediction
 
 The next task (and the final one for lab), is to find out where these mutations are, and whether they
 actually change any proteins in the host (mutations can also occur outside of genes in non-coding
@@ -382,7 +382,7 @@ Now that we have the correct file, use scp from a new, non ssh terminal window t
 desktop. (all one line).
 
 ```shell
-scp TODO*TODO:TODOPATH/mymodVarScan.vcf [path to desktop TODO]
+scp <username>@ieng6.ucsd.edu:[rootpath]/mymodVarScan.vcf [path to desktop]
 ```
 
 Go to the Variant Effect Predictor website, and click on ‘new job’. Upload your file, then check the
@@ -394,7 +394,7 @@ acid sequence), non-sense (introduces a frameshift or early stop codon), or syno
 amino acid change) and record what that **gene name** is. If there is an amino acid
 substitution, **record** what it is. 
 
-## 9. Write your lab report
+## 10. Write your lab report
 
 Hoorayy!!!! You’ve made it to the end. But you’re not done yet! Simply knowing the identity of
 these mutations won’t help the doctor decide how to treat a patient.
