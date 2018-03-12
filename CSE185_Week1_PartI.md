@@ -118,7 +118,7 @@ Your new repository, named "cse185-week1-<username>", is your own private copy o
 
 In addition, you'll see a mostly empty file `CSE185_Week1_LabNotebook.md` where you will need to fill in your lab notebook for the week. 
 
-Finally, you'll see a folder `labreport/` where you will upload anything used in your lab writeup for the week in addition to the final report.
+Finally, you'll see a folder `labreport/` where you will upload anything used in your lab writeup for the week in addition to the final report. A template has already been started for you.
 
 For this week, we'll work on the lab notebook and upload files using the web interface. Next week, we'll learn how to interact with github directly through the command line. We'll start by making a small edit to the lab notebook.
 
