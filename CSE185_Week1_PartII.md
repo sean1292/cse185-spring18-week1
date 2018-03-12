@@ -431,8 +431,4 @@ resistance testing wouldn’t have told you?
 Please follow these specific Week 1 directions **in addition to** the general format guideline for
 all lab reports.
 
-Lab reports are due on **TODO**! Let us know if you have questions, and
-there will be open office hours TODO if you want to
-discuss things in person. 
-
 **Acknowledgements**: Adapted from a lab originally written by Dr. Katie Petrie
