@@ -27,7 +27,7 @@ fastqc -h
 Run the program fastqc on the two fastq files. You will have to specify the path to the `public/week1`
 folder, since you should leave the files there. You also have to tell fastqc to `-o` output the files to the
 current directory, which you indicate with a `.` The command to do all this is below, but you have to
-specify the full root path to each fastq file (*i.e.* **TODO** )
+specify the full root path to each fastq file (*i.e.* `/home/linux/ieng6/cs185s/public/week1` )
 
 ```shell
 fastqc -o . [root path]/amp_res_1.fastq [root path]/amp_res_2.fastq
