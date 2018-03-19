@@ -87,7 +87,7 @@ command. The optional flag `-l` makes the output in "long format" and the `-h` m
 ls -lh
 ```
 
-Answer the <font color="blue">i>Clicker question</font> about the file sizes. When you get to this point, please wait for others to catch up before starting section 2. You can start the assigned reading (under week1 on TritonEd) if
+Answer the <font color="blue">i>Clicker question</font> about the file sizes. When you get to this point, please wait for others to catch up before starting section 2. You can start the assigned reading (see the course website) if
 you’d like.
 
 <blockquote>
@@ -193,6 +193,6 @@ modify them.
 
 ***That's its for this session! This was just a brief introduction to the data structure from illumina
 sequencing runs. Next time, you will preprocess the data, then align our reads to the E. coli
-genome and locate mutations in our antibiotic resistant strain. ***
+genome and locate mutations in our antibiotic resistant strain.***
 
 **Acknowledgements**: Adapted from a lab originally written by Dr. Katie Petrie
