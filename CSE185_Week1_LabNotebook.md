@@ -3,7 +3,7 @@
 #### Name: XXX
 #### Date: XXX
 
-# Markdown examples (you can everything below here once you've got the idea)
+# Markdown examples (you can delete everything below here once you've got the idea)
 
 # Here is a header
 ## Here is a smaller header
@@ -33,3 +33,11 @@ Here is a block of code
 ```shell
 echo "hello world"
 ```
+
+Here is a table:
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
