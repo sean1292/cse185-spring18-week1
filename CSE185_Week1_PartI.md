@@ -107,7 +107,7 @@ The Github Classroom homepage for our course is: https://classroom.github.com/cl
 
 To get started:
 
-1. Make a Github account (github.com) and send your username to to the TA for your section on slack.
+1. Make a Github account (github.com) and send your username to the TA for your section on slack.
 2. Click on the <a href="TODO">Assignment invitation link</a> to create your own private repository for the week 1 assignment.
 
 Your new repository, named "cse185-week1-<username>", is your own private copy of the repository for this week's assignment. Every week you'll create a similar private repository. You should see the following files listed:
