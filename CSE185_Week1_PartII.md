@@ -254,7 +254,12 @@ navigation, or use the arrow keys. The reference sequence will be at the top, al
 indicating the genome position, and individual reads will be shown below, aligned with the part of the
 reference they map to. When the reads from your ampicillin resistant bacterial strain have the same
 base as the reference there is a dot or a comma, and when they differ, you will see the base.
-Press escape to exit and enter the command again. How do you interpret the A at position 46? Answer the <font color="blue">i>Clicker question.</font> 
+Press escape to exit and enter the command again. How do you interpret the A at position 46? Answer the <font color="blue">i>Clicker question.</font> To navigate to position 46 (or any other position) quickly, press the `g`
+key to open Goto dialog box. Enter a position with `NC_000913.3:Position` format, where `NC_000913.3` is the name of the genome. This name can be extracted from the first line of the reference fasta file with the following command.
+
+```shell
+head -n 1 NC_000913.3.fasta
+```
 
 ## 8. Make a pileup, call variants
 
