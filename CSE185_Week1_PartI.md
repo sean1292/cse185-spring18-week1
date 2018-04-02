@@ -103,12 +103,10 @@ as a whole is limited, so we won’t make copies unless we have to.
 
 We will be keeping lab notebooks on github (see the lab notebooks handout for more info). Git is a framework for version control used for keeping track of changes to files and for coordinating work on files across multiple people. Github is a web-based hosting system for Git. There's a lot to learn about Git and Github. This week we'll keep it simple and learn about Git using the web interface. We'll learn more and more about Github as we go along.
 
-The Github Classroom homepage for our course is: https://classroom.github.com/classrooms/37308893-cse185-advanced-bioinformatics-laboratory
-
 To get started:
 
 1. Make a Github account (github.com) and send your username to the TA for your section on slack.
-2. Click on the <a href="TODO">Assignment invitation link</a> to create your own private repository for the week 1 assignment.
+2. From the [course homepage](https://github.com/gymreklab/cse185-spring18), click on the assignment 1 invitation link to create your own private repository for the week 1 assignment.
 
 Your new repository, named "cse185-week1-<username>", is your own private copy of the repository for this week's assignment. Every week you'll create a similar private repository. You should see the following files listed:
 
