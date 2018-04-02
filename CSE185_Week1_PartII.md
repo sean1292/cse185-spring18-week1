@@ -34,7 +34,7 @@ fastqc -o . [root path]/amp_res_1.fastq [root path]/amp_res_2.fastq
 ```
 
 Check with `ls` that this generated some files. The html files contain the whole report. To look at them,
-you will need to download them to your local mac desktop. 
+you will need to download them to your local computer. 
 
 Open a new terminal window and use `pwd` and `ls` to find the path to the desktop. Then use "secure
 copy" with the command below, using the full rooted path to
