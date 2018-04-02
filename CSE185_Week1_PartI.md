@@ -18,7 +18,7 @@ echo "Hello CSE 185"
 
 ## 1. Course server login and basic UNIX navigation
 
-You can ssh in to the course server from the terminal on any internet-connected mac or Linux machine. Launch terminal, play with the preferences to chose a color scheme you like (I also like to set my cursor to blinking), then log in with the command below. Replace XXXXX with your username obtained in class.
+You can ssh in to the course server from the terminal on any internet-connected mac or Linux machine. Launch terminal, play with the preferences to chose a color scheme you like (I also like to set my cursor to blinking), then log in with the command below. Replace XXXXX with your username obtained in class. If you don't know your usename, you can look it up [here](https://sdacs.ucsd.edu/~icc/index.php). If you are not using a course-specific account, you'll need to run the `prep` command to get set up for CSE185 specific resources.
 
 ```shell
 ssh XXXXX@ieng6.ucsd.edu
@@ -107,7 +107,7 @@ The Github Classroom homepage for our course is: https://classroom.github.com/cl
 
 To get started:
 
-1. Make a Github account (github.com) and send your username to @mgymrek on slack.
+1. Make a Github account (github.com) and send your username to to the TA for your section on slack.
 2. Click on the <a href="TODO">Assignment invitation link</a> to create your own private repository for the week 1 assignment.
 
 Your new repository, named "cse185-week1-<username>", is your own private copy of the repository for this week's assignment. Every week you'll create a similar private repository. You should see the following files listed:
@@ -191,7 +191,7 @@ the command prompt to scroll through your recent commands, then use the arrow ke
 modify them.
 </blockquote>
 
-***That's its for this session! This was just a brief introduction to the data structure from illumina
+***That's it for this session! This was just a brief introduction to the data structure from illumina
 sequencing runs. Next time, you will preprocess the data, then align our reads to the E. coli
 genome and locate mutations in our antibiotic resistant strain.***
 
